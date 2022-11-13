@@ -1,0 +1,41 @@
+{
+    "name": "notperfect/search",
+    "description": "basic search for laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "James",
+            "email": "author@email.com",
+            "homepage": "http://author.com"
+        }
+    ],
+    "homepage": "https://github.com/notperfect/search",
+    "keywords": ["Laravel", "Search"],
+    "require": {
+        "illuminate/support": "~9"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~7"
+    },
+    "autoload": {
+        "psr-4": {
+            "NotPerfect\\Search\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NotPerfect\\Search\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NotPerfect\\Search\\SearchServiceProvider"
+            ],
+            "aliases": {
+                "Search": "NotPerfect\\Search\\Facades\\Search"
+            }
+        }
+    }
+}
