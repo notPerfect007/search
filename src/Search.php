@@ -14,9 +14,9 @@ class Search
             ];
 
 foreach( $arrayOfModelsWithFieldsToSearch as $model => $value){
-    echo $model;
+    print_r($model) ;
     foreach($value as $field){
-        echo $field;
+        print_r($field) ;
     }
 }
 
