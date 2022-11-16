@@ -28,7 +28,7 @@ foreach( $arrayOfModelsWithFieldsToSearch as $model => $value){
 
 
 
-            ->paginate(4)->withQueryString();
+        //    ->paginate(4)->withQueryString();
 
             return $searchResults;
 
