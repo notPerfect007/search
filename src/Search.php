@@ -1,7 +1,8 @@
 <?php
 
 namespace NotPerfect\Search;
-
+use App\Models\Recipe;
+use App\Models\recipe_categories;
 
 class Search
 {
