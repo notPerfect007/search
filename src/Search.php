@@ -22,11 +22,7 @@ foreach( $arrayOfModelsWithFieldsToSearch as $model => $value){
      array_push($searchResults, $model::where($field , 'like', '%' . $searchTerm . '%') )   ;
     }
 }
-
             dd($searchResults);
-
-
-
 
         //    ->paginate(4)->withQueryString();
 
