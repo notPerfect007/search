@@ -13,19 +13,23 @@ class Search
                 'recipe_categories' => ['name', 'metaDescription']
             ];
 
+            $searchResults = [];
+
 foreach( $arrayOfModelsWithFieldsToSearch as $model => $value){
-    print_r($model) ;
+
     foreach($value as $field){
-        print_r($field) ;
+
+     array_push($searchResults, $model::where($field , 'like', '%' . $searchTerm . '%') )   ;
     }
 }
 
-            dd($arrayOfModelsWithFieldsToSearch);
-
-            $searchResults = Recipe::where('name', 'like', '%' . $searchTerm . '%')->paginate(4)
+            dd($searchResults);
 
 
-            ->withQueryString();
+
+
+            ->paginate(4)->withQueryString();
+
             return $searchResults;
 
     }
