@@ -7,7 +7,9 @@ Route::get('/search', function () {
 
     if (request('search')) {
 
-        return \NotPerfect\Search\Search::search();
+        $searchTerm = request('search');
+
+        return \NotPerfect\Search\Search::search($searchTerm);
     } else {
         return 'nothing searched';
     }
