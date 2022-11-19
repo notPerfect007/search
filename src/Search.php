@@ -2,8 +2,8 @@
 
 namespace NotPerfect\Search;
 
-include (app_path() . '\App\Models\Recipe');
-include (app_path() . '\App\Models\recipe_categories');
+include (app_path() . '\Models\Recipe');
+include (app_path() . '\Models\recipe_categories');
 
 class Search
 {
