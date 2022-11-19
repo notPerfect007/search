@@ -13,5 +13,4 @@ Route::get('/search', function () {
     } else {
         return 'nothing searched';
     }
-
 });
